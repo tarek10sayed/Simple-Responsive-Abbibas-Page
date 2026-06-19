@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: fantasy;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #2d263a, #37324d);
+    justify-content: center;
+    align-items: center;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    z-index: -10;
+    clip-path: circle(40% at right 80%);
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.19);
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+
+
+}
+
+ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+
+    font-size: 40px;
+}
+
+ul li {
+    width: 70%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+}
+
+ul li a:hover {
+    font-size: xx-large;
+    transition: 0.9s;
+    color: skyblue;
+    text-decoration: underline;
+    text-shadow: lightcoral -5px -2px;
+
+}
+
+.logo:hover {
+    font-size: 50px;
+    transition: 0.9s;
+    color: skyblue;
+    text-decoration: underline;
+    text-shadow: lightcoral -5px -2px;
+}
+
+main {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.text {
+    width: 40%;
+}
+
+main .text h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+main .text p {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 10px;
+    letter-spacing: 1px;
+}
+
+.main .image {
+    width: 40%;
+}
+
+img {
+    width: 400px;
+}
+
+@media (min-width:950px) and (max-width:1150px) {
+    img {
+        width: 330px;
+    }
+}
+
+@media (max-width:950px) {
+    main {
+
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    main .text,
+    main img {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+
+    }
+
+    ul {
+        justify-content: center;
+        align-self: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    ul li {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .container {
+        overflow: visible;
+    }
+
+    body::after {
+        clip-path: circle(50% at bottom);
+    }
+}
